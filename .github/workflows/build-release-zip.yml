@@ -60,4 +60,4 @@ jobs:
         uses: jdevalk/action-wordpress-plugin-build-zip@patch-1
 
       - name: Print ZIP URL
-        run:  echo 'Artifact URL is ${{ steps.generate-zip.outputs.artifact-url }}'
+        run:  echo 'Artifact URL is ${{ steps.upload-plugin-artifact.outputs.artifact-url }}'

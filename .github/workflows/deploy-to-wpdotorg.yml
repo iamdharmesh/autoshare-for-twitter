@@ -16,9 +16,10 @@ jobs:
         composer install -o --no-dev --ignore-platform-reqs
     - name: WordPress Plugin Deploy
       id: deploy
-      uses: 10up/action-wordpress-plugin-deploy@stable
+      uses: 10up/action-wordpress-plugin-deploy@fix/distignore
       with:
         generate-zip: true
+        dry-run: true
       env:
         SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
         SVN_USERNAME: ${{ secrets.SVN_USERNAME }}

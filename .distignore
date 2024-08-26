@@ -10,7 +10,7 @@
 
 # Files
 .*
-CHANGELOG.md
+!CHANGELOG.md
 CODE_OF_CONDUCT.md
 composer.json
 composer.lock
@@ -21,5 +21,5 @@ package-lock.json
 package.json
 phpcs.xml
 phpunit.xml
-README.md
+!README.md
 webpack.config.js

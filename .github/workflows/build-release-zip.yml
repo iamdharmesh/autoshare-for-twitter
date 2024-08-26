@@ -56,4 +56,8 @@ jobs:
         run: npm run build
 
       - name: Generate ZIP file
-        uses: 10up/action-wordpress-plugin-build-zip@stable
+        id: generate-zip
+        uses: jdevalk/action-wordpress-plugin-build-zip@patch-1
+
+      - name: Print ZIP URL
+        run:  echo 'Artifact URL is ${{ steps.upload-plugin-artifact.outputs.artifact-url }}'

@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    uses: 10up/autoshare-for-twitter/.github/workflows/build-release-zip.yml@develop
+    uses: iamdharmesh/autoshare-for-twitter/.github/workflows/build-release-zip.yml@iamdharmesh-patch-1
 
   cypress:
     needs: build

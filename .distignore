@@ -7,8 +7,8 @@
 /tests
 /src
 # DO NOT EXCLUDE /vendor
-/vendor/*
-!/vendor/abraham/*
+vendor/*
+!vendor/abraham
 
 # Files
 .*

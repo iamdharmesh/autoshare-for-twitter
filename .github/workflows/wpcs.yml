@@ -16,7 +16,7 @@ jobs:
       steps:
         - uses: actions/checkout@v3
         - name: VIPCS check
-          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+          uses: iamdharmesh/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             standard: 'WordPress-VIP-Go'
   tenupcs:

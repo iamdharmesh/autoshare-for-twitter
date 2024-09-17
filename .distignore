@@ -7,8 +7,7 @@
 /tests
 /src
 # DO NOT EXCLUDE /vendor
-vendor/*
-# !vendor/abraham
+/vendor
 
 # Files
 .*
@@ -26,4 +25,3 @@ phpunit.xml
 !README.md
 webpack.config.js
 *.txt
-!readme.txt

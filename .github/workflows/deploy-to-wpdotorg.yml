@@ -16,7 +16,7 @@ jobs:
         composer install -o --no-dev --ignore-platform-reqs
     - name: WordPress Plugin Deploy
       id: deploy
-      uses: 10up/action-wordpress-plugin-deploy@fix/distignore
+      uses: 10up/action-wordpress-plugin-deploy@stable
       with:
         generate-zip: true
         dry-run: true

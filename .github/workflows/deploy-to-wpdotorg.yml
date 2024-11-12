@@ -14,9 +14,13 @@ jobs:
         npm install
         npm run build
         composer install -o --no-dev --ignore-platform-reqs
+
+    - name: Install SVN ( Subversion )
+      run: sudo apt-get install subversion
+
     - name: WordPress Plugin Deploy
       id: deploy
-      uses: iamdharmesh/action-wordpress-plugin-deploy@svn-install
+      uses: 10up/action-wordpress-plugin-deploy@stable
       with:
         generate-zip: true
         dry-run: true

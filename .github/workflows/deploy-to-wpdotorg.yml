@@ -16,7 +16,7 @@ jobs:
         composer install -o --no-dev --ignore-platform-reqs
     - name: WordPress Plugin Deploy
       id: deploy
-      uses: 10up/action-wordpress-plugin-deploy@fix/distignore
+      uses: iamdharmesh/action-wordpress-plugin-deploy@svn-install
       with:
         generate-zip: true
         dry-run: true

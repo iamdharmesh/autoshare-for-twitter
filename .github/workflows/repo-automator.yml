@@ -30,3 +30,5 @@ jobs:
             team:open-source-practice
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check spelling
+        uses: crate-ci/typos@master

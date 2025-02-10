@@ -20,6 +20,7 @@ jobs:
       uses: iftakharul-islam/action-wordpress-plugin-deploy@develop
       with:
         generate-zip: true
+        dry-run: true
     - name: Upload release asset
       uses: softprops/action-gh-release@v2
       env:

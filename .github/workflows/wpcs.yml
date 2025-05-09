@@ -38,4 +38,5 @@ jobs:
           uses: iamdharmesh/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             use_local_config: 'true'
+            extra_args: "--extensions=php"
 

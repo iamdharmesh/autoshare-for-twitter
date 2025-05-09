@@ -7,14 +7,14 @@ jobs:
       name: WPCS
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         - name: WPCS check
           uses: iamdharmesh/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
   vipcs:
       name: VIPCS
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         - name: VIPCS check
           uses: iamdharmesh/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
@@ -23,7 +23,7 @@ jobs:
       name: 10upCS
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         - name: 10upCS check
           uses: iamdharmesh/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:

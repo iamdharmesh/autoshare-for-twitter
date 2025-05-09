@@ -39,4 +39,13 @@ jobs:
           with:
             use_local_config: 'true'
             extra_args: "--extensions=php"
-
+  localconfig1: 
+      name: WPCS check1
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - name: 10upCS check
+          uses: iamdharmesh/wpcs-action@develop
+          with:
+            use_local_config: 'true'
+            extra_args: "--extensions=php"

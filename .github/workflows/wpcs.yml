@@ -29,4 +29,13 @@ jobs:
           with:
             standard: 10up-Default
             enable_warnings: true
+  localconfig: 
+      name: WPCS check
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - name: 10upCS check
+          uses: iamdharmesh/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+          with:
+            use_local_config: 'true'
 

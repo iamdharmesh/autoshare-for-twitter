@@ -39,13 +39,39 @@ jobs:
           with:
             use_local_config: 'true'
             extra_args: "--extensions=php"
+  phpcs1:
+      name: WPCS1
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - name: WPCS check
+          uses: 10up/wpcs-action@develop
+  vipcs1:
+      name: VIPCS1
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - name: VIPCS check
+          uses: 10up/wpcs-action@develop
+          with:
+            standard: 'WordPress-VIP-Go'
+  tenupcs1:
+      name: 10upCS1
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - name: 10upCS check
+          uses: 10up/wpcs-action@develop
+          with:
+            standard: 10up-Default
+            enable_warnings: true
   localconfig1: 
       name: WPCS check1
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
         - name: 10upCS check
-          uses: iamdharmesh/wpcs-action@develop
+          uses: 10up/wpcs-action@develop
           with:
             use_local_config: 'true'
             extra_args: "--extensions=php"

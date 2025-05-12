@@ -9,14 +9,14 @@ jobs:
       steps:
         - uses: actions/checkout@v4
         - name: WPCS check
-          uses: iamdharmesh/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
   vipcs:
       name: VIPCS
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
         - name: VIPCS check
-          uses: iamdharmesh/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             standard: 'WordPress-VIP-Go'
   tenupcs:
@@ -25,7 +25,7 @@ jobs:
       steps:
         - uses: actions/checkout@v4
         - name: 10upCS check
-          uses: iamdharmesh/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             standard: 10up-Default
             enable_warnings: true
@@ -35,7 +35,7 @@ jobs:
       steps:
         - uses: actions/checkout@v4
         - name: 10upCS check
-          uses: iamdharmesh/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             use_local_config: 'true'
             extra_args: "--extensions=php"

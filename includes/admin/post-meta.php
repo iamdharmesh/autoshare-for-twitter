@@ -242,7 +242,7 @@ function render_tweet_submitbox( $post ) {
 	$post_status = get_post_status( $post );
 
 	// If the post is already published the output varies slightly.
-	if ( 'publish' === $post_status ) {
+	if ( 'publish' == $post_status ) {
 		// Display tweet status logs.
 		?>
 		<div class="autoshare-for-twitter-status-logs-wrapper">

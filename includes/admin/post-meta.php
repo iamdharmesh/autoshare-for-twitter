@@ -615,3 +615,4 @@ function _safe_markup_default() {
  * @uses autoshare_for_twitter_setup
  */
 add_action( 'autoshare_for_twitter_setup', __NAMESPACE__ . '\setup' );
+

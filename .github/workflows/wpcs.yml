@@ -55,6 +55,8 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
         - name: 10upCS check
           uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:

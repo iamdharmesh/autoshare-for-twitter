@@ -8,15 +8,13 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - name: WPCS check
-          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+        - uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
   vipcs:
       name: VIPCS
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - name: VIPCS check
-          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+        - uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             standard: 'WordPress-VIP-Go'
   tenupcs:
@@ -24,8 +22,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - name: 10upCS check
-          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+        - uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             standard: 10up-Default
             enable_warnings: true
@@ -35,8 +32,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - name: 10upCS check
-          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+        - uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             use_local_config: 'true'
             extra_args: "--extensions=php"
@@ -45,8 +41,9 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - name: 10upCS check
-          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+          with:
+            fetch-depth: 0
+        - uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             standard: 10up-Default
             only_changed_lines: 'true'
@@ -57,8 +54,7 @@ jobs:
         - uses: actions/checkout@v4
           with:
             fetch-depth: 0
-        - name: 10upCS check
-          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+        - uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             standard: 10up-Default
             only_changed_files: 'true'
@@ -67,8 +63,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - name: 10upCS check
-          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+        - uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             standard_repo: 'https://github.com/10up/phpcs-composer'
             repo_branch: 'trunk'
@@ -77,19 +72,16 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - name: 10upCS check
-          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+        - uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             standard: 10up-Default
             excludes: './tests/,./includes/admin/post-meta.php'
-
   includes:
       name: With paths only
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - name: 10upCS check
-          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+        - uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             standard: 10up-Default
             paths: './includes/admin/post-meta.php ./includes/admin/settings.php'

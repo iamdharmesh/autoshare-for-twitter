@@ -7,6 +7,11 @@
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found" />
 		<exclude name="Universal.Arrays.DisallowShortArraySyntax.Found" />
 		<exclude name="Universal.UseStatements.NoUselessAliases.Found" />
+		<exclude name="Squiz.Functions.MultiLineFunctionDeclaration.SpaceAfterFunction" />
+		<exclude name="PSR12.Files.FileHeader.IncorrectOrder" />
+		<exclude name="Universal.UseStatements.NoLeadingBackslash.LeadingBackslashFound" />
+		<exclude name="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody" />
+		<exclude name="PSR2.Methods.FunctionClosingBrace.SpacingBeforeClose" />
 	</rule>
 	<file>.</file>
 	<exclude-pattern>node_modules</exclude-pattern>

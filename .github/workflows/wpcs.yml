@@ -43,18 +43,7 @@ jobs:
         - uses: actions/checkout@v4
           with:
             fetch-depth: 0
-        - uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
-          with:
-            standard: 10up-Default
-            only_changed_lines: 'true'
-  changed_lines1:
-      name: Changed Lines only1
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-          with:
-            fetch-depth: 0
-        - uses: 10up/wpcs-action@stable
+        - uses: iamdharmesh/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             standard: 10up-Default
             only_changed_lines: 'true'

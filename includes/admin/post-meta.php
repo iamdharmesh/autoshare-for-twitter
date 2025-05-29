@@ -10,8 +10,8 @@ namespace TenUp\AutoshareForTwitter\Core\Post_Meta;
 /**
  * Aliases
  */
-use TenUp\AutoshareForTwitter\Utils as Utils; 
-use TenUp\AutoshareForTwitter\Core\Twitter_Accounts as Twitter_Accounts; 
+use TenUp\AutoshareForTwitter\Utils as Utils;
+use TenUp\AutoshareForTwitter\Core\Twitter_Accounts as Twitter_Accounts;
 
 use function TenUp\AutoshareForTwitter\Utils\autoshare_enabled;
 use function TenUp\AutoshareForTwitter\Utils\update_autoshare_for_twitter_meta;
@@ -242,7 +242,8 @@ function render_tweet_submitbox( $post ) {
 	$post_status = get_post_status( $post );
 
 	// If the post is already published the output varies slightly.
-	if ( 'publish' == $post_status ) {
+	if ( 'publish' === $post_status ) {
+		error_log("TTT");
 		// Display tweet status logs.
 		?>
 		<div class="autoshare-for-twitter-status-logs-wrapper">
@@ -615,4 +616,3 @@ function _safe_markup_default() {
  * @uses autoshare_for_twitter_setup
  */
 add_action( 'autoshare_for_twitter_setup', __NAMESPACE__ . '\setup' );
-

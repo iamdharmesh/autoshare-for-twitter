@@ -47,6 +47,17 @@ jobs:
           with:
             standard: 10up-Default
             only_changed_lines: 'true'
+  changed_lines1:
+      name: Changed Lines only1
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
+        - uses: 10up/wpcs-action@stable
+          with:
+            standard: 10up-Default
+            only_changed_lines: 'true'
   changed_files:
       name: Changed Files only
       runs-on: ubuntu-latest

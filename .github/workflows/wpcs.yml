@@ -4,7 +4,7 @@ on: pull_request
 
 jobs:
   phpcs:
-      name: WPCS
+      name: Default CS
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
@@ -29,9 +29,9 @@ jobs:
           with:
             standard: 10up-Default
             enable_warnings: true
-            excludes: './tests/ ./includes/admin/post-meta.php'
+            excludes: './tests/'
   localconfig: 
-      name: Local Config
+      name: Use Local Config
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
@@ -79,7 +79,7 @@ jobs:
           uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             standard: 10up-Default
-            excludes: './tests/ ./includes/admin/post-meta.php'
+            excludes: './tests/,./includes/admin/post-meta.php'
 
   includes:
       name: With paths only
@@ -91,39 +91,3 @@ jobs:
           with:
             standard: 10up-Default
             paths: './includes/admin/post-meta.php ./includes/admin/settings.php'
-  phpcs1:
-      name: WPCS1
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        - name: WPCS check
-          uses: 10up/wpcs-action@develop
-  vipcs1:
-      name: VIPCS1
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        - name: VIPCS check
-          uses: 10up/wpcs-action@develop
-          with:
-            standard: 'WordPress-VIP-Go'
-  tenupcs1:
-      name: 10upCS1
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        - name: 10upCS check
-          uses: 10up/wpcs-action@develop
-          with:
-            standard: 10up-Default
-            enable_warnings: true
-  localconfig1: 
-      name: WPCS check1
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        - name: 10upCS check
-          uses: 10up/wpcs-action@develop
-          with:
-            use_local_config: 'true'
-            extra_args: "--extensions=php"

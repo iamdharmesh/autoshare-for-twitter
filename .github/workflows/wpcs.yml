@@ -36,17 +36,6 @@ jobs:
           with:
             use_local_config: 'true'
             extra_args: "--extensions=php"
-  changed_lines:
-      name: Changed Lines only
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-          with:
-            fetch-depth: 0
-        - uses: iamdharmesh/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
-          with:
-            standard: 10up-Default
-            only_changed_lines: 'true'
   changed_files:
       name: Changed Files only
       runs-on: ubuntu-latest

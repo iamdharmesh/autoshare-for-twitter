@@ -29,6 +29,7 @@ jobs:
           with:
             standard: 10up-Default
             enable_warnings: true
+            excludes: './tests/ ./includes/admin/post-meta.php'
   localconfig: 
       name: Local Config
       runs-on: ubuntu-latest
@@ -38,6 +39,7 @@ jobs:
           uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
           with:
             use_local_config: 'true'
+            extra_args: "--extensions=php"
   changed_lines:
       name: Changed Lines only
       runs-on: ubuntu-latest
@@ -68,6 +70,27 @@ jobs:
           with:
             standard_repo: 'https://github.com/10up/phpcs-composer'
             repo_branch: 'trunk'
+  excludes:
+      name: With excludes
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - name: 10upCS check
+          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+          with:
+            standard: 10up-Default
+            excludes: './tests/ ./includes/admin/post-meta.php'
+
+  includes:
+      name: With paths only
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - name: 10upCS check
+          uses: 10up/wpcs-action@fix/35-upgrade-wordpress-coding-standards-to-3.1
+          with:
+            standard: 10up-Default
+            paths: './includes/admin/post-meta.php ./includes/admin/settings.php'
   phpcs1:
       name: WPCS1
       runs-on: ubuntu-latest

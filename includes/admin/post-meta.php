@@ -243,7 +243,6 @@ function render_tweet_submitbox( $post ) {
 
 	// If the post is already published the output varies slightly.
 	if ( 'publish' === $post_status ) {
-		error_log("TTT");
 		// Display tweet status logs.
 		?>
 		<div class="autoshare-for-twitter-status-logs-wrapper">

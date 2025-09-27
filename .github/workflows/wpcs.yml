@@ -8,13 +8,13 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - uses: 10up/wpcs-action@stable
+        - uses: paulschreiber/wpcs-action@develop
   vipcs:
       name: VIPCS
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - uses: 10up/wpcs-action@stable
+        - uses: paulschreiber/wpcs-action@develop
           with:
             standard: 'WordPress-VIP-Go'
   tenupcs:
@@ -22,7 +22,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - uses: 10up/wpcs-action@stable
+        - uses: paulschreiber/wpcs-action@develop
           with:
             standard: 10up-Default
             enable_warnings: true
@@ -32,7 +32,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - uses: 10up/wpcs-action@stable
+        - uses: paulschreiber/wpcs-action@develop
           with:
             use_local_config: 'true'
             extra_args: "--extensions=php"
@@ -43,7 +43,7 @@ jobs:
         - uses: actions/checkout@v4
           with:
             fetch-depth: 0
-        - uses: 10up/wpcs-action@stable
+        - uses: paulschreiber/wpcs-action@develop
           with:
             standard: 10up-Default
             only_changed_files: 'true'
@@ -52,7 +52,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - uses: 10up/wpcs-action@stable
+        - uses: paulschreiber/wpcs-action@develop
           with:
             standard_repo: 'https://github.com/10up/phpcs-composer'
             repo_branch: 'trunk'
@@ -61,7 +61,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - uses: 10up/wpcs-action@stable
+        - uses: paulschreiber/wpcs-action@develop
           with:
             standard: 10up-Default
             excludes: './tests/,./includes/admin/post-meta.php'
@@ -70,7 +70,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
-        - uses: 10up/wpcs-action@stable
+        - uses: paulschreiber/wpcs-action@develop
           with:
             standard: 10up-Default
             paths: './includes/admin/post-meta.php ./includes/admin/settings.php'

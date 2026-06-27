@@ -31,9 +31,6 @@ jobs:
           fail-label: needs:feedback
           pass-label: needs:code-review
           conflict-label: needs:refresh
-          validate-pr-template-sections: |
-            Description of the Change
-            Credits
           reviewers: |
             iamdharmesh
             team:open-source-practice

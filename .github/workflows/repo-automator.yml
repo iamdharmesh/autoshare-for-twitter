@@ -31,6 +31,13 @@ jobs:
           fail-label: needs:feedback
           pass-label: needs:code-review
           conflict-label: needs:refresh
+          validate-description: false
+          validate-changelog: false
+          validate-credits: false
+          validate-pr-template-sections: |
+            What?
+            Why?
+            Use of AI Tools
           reviewers: |
             iamdharmesh
             team:open-source-practice
